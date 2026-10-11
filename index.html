@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Moutahir — Portfolio</title>
+  <meta name="description" content="Portfolio de Mohamed Moutahir, étudiant en informatique à l'Université Ibn Tofaïl. Passionné par l'IA, la cybersécurité et le développement logiciel." />
+  <meta name="keywords" content="Mohamed Moutahir, portfolio, informatique, étudiant, développeur, Python, IA, cybersécurité, Ibn Tofaïl" />
+  <meta name="author" content="Mohamed Moutahir" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohamed Moutahir — Portfolio" />
+  <meta property="og:description" content="Étudiant en informatique passionné par l'IA et la cybersécurité." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Accueil">
+        <span class="logo-text">MOHAMED</span><span class="logo-dot">.</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="#home" class="nav-link active" role="menuitem">Accueil</a></li>
+        <li role="none"><a href="#about" class="nav-link" role="menuitem">À propos</a></li>
+        <li role="none"><a href="#skills" class="nav-link" role="menuitem">Compétences</a></li>
+        <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projets</a></li>
+        <li role="none"><a href="#education" class="nav-link" role="menuitem">Formation</a></li>
+        <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="assets/cv-mohamed-moutahir.pdf" class="btn btn-cv" download aria-label="Télécharger mon CV">
+          <i class="ri-download-2-line"></i>
+          <span>CV</span>
+        </a>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème" type="button">
+          <i class="ri-moon-line" id="themeIcon"></i>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" type="button">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO — ACCUEIL
+  ═══════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <!-- Animated background -->
+    <div class="hero-bg" aria-hidden="true">
+      <canvas id="heroCanvas"></canvas>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting reveal">
+          <span class="greeting-line"></span>
+          Bonjour, je suis <span class="highlight">Mohamed Moutahir</span>
+        </p>
+        <h1 class="hero-title reveal">
+          Étudiant en informatique<br />
+          <span class="gradient-text">AI &amp; Cybersecurity Enthusiast</span>
+        </h1>
+        <p class="hero-description reveal">
+          Étudiant en informatique, je développe progressivement mes compétences en programmation,
+          conception logicielle et technologies numériques. Je m'intéresse particulièrement à
+          l'intelligence artificielle et à la cybersécurité.
+        </p>
+        <div class="hero-buttons reveal">
+          <a href="#projects" class="btn btn-primary">
+            <i class="ri-folder-3-line"></i>
+            Découvrir mes projets
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="ri-mail-send-line"></i>
+            Me contacter
+          </a>
+        </div>
+
+        <div class="hero-tech-tags reveal">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">C/C++</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">IA</span>
+          <span class="tech-tag">Cybersécurité</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="avatar-wrapper">
+          <!-- Photo placeholder: remplacez le contenu par <img src="assets/photo.jpg" alt="Mohamed Moutahir" /> -->
+          <div class="avatar-placeholder" id="avatarPlaceholder">
+            <div class="avatar-code" aria-hidden="true">
+              <span class="code-line"><span class="code-keyword">class</span> <span class="code-class">Mohamed</span>:</span>
+              <span class="code-line indent"><span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):</span>
+              <span class="code-line indent2">self.passion = <span class="code-string">"CS"</span></span>
+              <span class="code-line indent2">self.learning = <span class="code-bool">True</span></span>
+              <span class="code-line indent2">self.interests = [</span>
+              <span class="code-line indent3"><span class="code-string">"AI"</span>,</span>
+              <span class="code-line indent3"><span class="code-string">"Cybersecurity"</span></span>
+              <span class="code-line indent2">]</span>
+            </div>
+          </div>
+          <div class="avatar-glow" aria-hidden="true"></div>
+          <div class="avatar-ring" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Défiler vers la section suivante">
+      <i class="ri-arrow-down-line"></i>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       À PROPOS
+  ═══════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-tag"><i class="ri-user-3-line"></i> À propos</span>
+        <h2 class="section-title">Qui suis-je<span class="title-dot">?</span></h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="reveal">
+            Actuellement en troisième année d'informatique à l'Université Ibn Tofaïl au Maroc,
+            j'ai obtenu mon DEUG en informatique à la Faculté des Sciences. Ce parcours m'a permis
+            de construire des bases solides en programmation, algorithmique et mathématiques appliquées.
+          </p>
+          <p class="reveal">
+            Je suis passionné par la résolution de problèmes et l'approche analytique qu'offre
+            l'informatique. Mon esprit mathématique me pousse à chercher des solutions élégantes
+            et efficaces aux défis techniques.
+          </p>
+          <p class="reveal">
+            Ma volonté est de transformer mes connaissances théoriques en projets concrets, en
+            explorant progressivement des domaines comme l'intelligence artificielle et la
+            cybersécurité. Chaque projet est pour moi une opportunité d'apprendre et de progresser.
+          </p>
+        </div>
+
+        <div class="about-highlights">
+          <div class="highlight-card reveal">
+            <div class="highlight-icon"><i class="ri-graduation-cap-line"></i></div>
+            <div class="highlight-text">
+              <strong>DEUG obtenu</strong>
+              <span>en informatique</span>
+            </div>
+          </div>
+          <div class="highlight-card reveal">
+            <div class="highlight-icon"><i class="ri-code-s-slash-line"></i></div>
+            <div class="highlight-text">
+              <strong>Programmation</strong>
+              <span>C, C++, Python</span>
+            </div>
+          </div>
+          <div class="highlight-card reveal">
+            <div class="highlight-icon"><i class="ri-brain-line"></i></div>
+            <div class="highlight-text">
+              <strong>Passionné</strong>
+              <span>IA &amp; Cybersécurité</span>
+            </div>
+          </div>
+          <div class="highlight-card reveal">
+            <div class="highlight-icon"><i class="ri-lightbulb-line"></i></div>
+            <div class="highlight-text">
+              <strong>Esprit analytique</strong>
+              <span>et mathématique</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-languages reveal">
+          <h3 class="about-subtitle"><i class="ri-translate-2"></i> Langues</h3>
+          <div class="languages-list">
+            <div class="language-item">
+              <span class="language-name">Arabe</span>
+              <span class="language-level">Langue maternelle</span>
+            </div>
+            <div class="language-item">
+              <span class="language-name">Français</span>
+              <span class="language-level">Intermédiaire</span>
+            </div>
+            <div class="language-item">
+              <span class="language-name">Anglais</span>
+              <span class="language-level">Intermédiaire</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       COMPÉTENCES
+  ═══════════════════════════════════════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-tag"><i class="ri-tools-line"></i> Compétences</span>
+        <h2 class="section-title">Mes compétences techniques</h2>
+      </header>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Filled by JavaScript from config.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROJETS
+  ═══════════════════════════════════════════ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-tag"><i class="ri-folder-3-line"></i> Projets</span>
+        <h2 class="section-title">Mes projets</h2>
+        <p class="section-subtitle">Découvrez les projets que j'ai réalisés ou sur lesquels je travaille actuellement.</p>
+      </header>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Filled by JavaScript from config.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FORMATION
+  ═══════════════════════════════════════════ -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-tag"><i class="ri-graduation-cap-line"></i> Formation</span>
+        <h2 class="section-title">Mon parcours académique</h2>
+      </header>
+
+      <div class="timeline" id="timeline">
+        <!-- Filled by JavaScript from config.js -->
+      </div>
+
+      <div class="certifications reveal">
+        <div class="cert-placeholder">
+          <i class="ri-award-line"></i>
+          <p>Certifications et formations complémentaires à venir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-tag"><i class="ri-mail-send-line"></i> Contact</span>
+        <h2 class="section-title">Me contacter</h2>
+        <p class="section-subtitle">N'hésitez pas à me contacter pour toute question ou opportunité.</p>
+      </header>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="ri-mail-line"></i></div>
+            <div class="contact-details">
+              <h3>E-mail</h3>
+              <!-- Remplacez par votre vrai e-mail -->
+              <a href="mailto:votre.email@exemple.com" id="contactEmail">votre.email@exemple.com</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="ri-linkedin-box-line"></i></div>
+            <div class="contact-details">
+              <h3>LinkedIn</h3>
+              <!-- Remplacez par votre vrai profil LinkedIn -->
+              <a href="#" target="_blank" rel="noopener noreferrer" id="contactLinkedin">Mon profil LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="ri-github-line"></i></div>
+            <div class="contact-details">
+              <h3>GitHub</h3>
+              <!-- Remplacez par votre vrai profil GitHub -->
+              <a href="#" target="_blank" rel="noopener noreferrer" id="contactGithub">Mon profil GitHub</a>
+            </div>
+          </div>
+
+          <div class="contact-note">
+            <i class="ri-information-line"></i>
+            <p>Les coordonnées ci-dessus sont des emplacements à configurer. Mettez à jour le fichier <code>js/config.js</code> avec vos vraies informations.</p>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="formName">Nom <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="ri-user-line"></i>
+              <input type="text" id="formName" name="name" placeholder="Votre nom" required autocomplete="name" />
+            </div>
+            <span class="form-error" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="formEmail">E-mail <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="ri-mail-line"></i>
+              <input type="email" id="formEmail" name="email" placeholder="Votre adresse e-mail" required autocomplete="email" />
+            </div>
+            <span class="form-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="formSubject">Sujet <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="ri-chat-3-line"></i>
+              <input type="text" id="formSubject" name="subject" placeholder="Sujet de votre message" required />
+            </div>
+            <span class="form-error" id="subjectError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="formMessage">Message <span class="required">*</span></label>
+            <div class="input-wrapper textarea-wrapper">
+              <i class="ri-file-text-line"></i>
+              <textarea id="formMessage" name="message" rows="5" placeholder="Votre message..." required></textarea>
+            </div>
+            <span class="form-error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            <i class="ri-send-plane-line"></i>
+            Envoyer le message
+          </button>
+
+          <div class="form-notice">
+            <i class="ri-information-line"></i>
+            <p>Ce formulaire nécessite un service d'envoi (ex : <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a>, <a href="https://www.emailjs.com" target="_blank" rel="noopener noreferrer">EmailJS</a>). Consultez le fichier <code>js/main.js</code> pour la configuration.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <span class="logo-text">MOHAMED</span><span class="logo-dot">.</span>
+        </a>
+        <p class="footer-tagline">Étudiant en informatique — Construire, apprendre, innover.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navigation pied de page">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#education">Formation</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <h4>Retrouvez-moi</h4>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub" id="footerGithub">
+            <i class="ri-github-line"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" id="footerLinkedin">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+          <a href="mailto:votre.email@exemple.com" aria-label="E-mail" id="footerEmail">
+            <i class="ri-mail-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Mohamed Moutahir. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut" type="button">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
